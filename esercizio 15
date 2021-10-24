@@ -1,0 +1,309 @@
+package Esercizio_15;  // stampare a video i multilpi di 3, 5 e 3 e 5 minori del numero inserito da tastiera.
+
+import java.util.Scanner;
+
+public class Esercizio15 {
+
+	public static void main(String[] args) {
+
+		
+
+		int x1= 3;
+
+		int n;
+
+		int sm1=1;
+
+		int x2= 5;
+
+		int resto =0;
+
+		int x3=15;
+
+		String  continuare1 = "ok";
+
+		String continuare= "ok";
+
+		Scanner scan = new Scanner(System.in);
+		
+		
+		while(continuare1.equals(continuare)) { // qua la prima graffa del ciclo while
+
+		
+				
+		scan.useDelimiter(System.getProperty("line.separator"));
+
+		
+
+		System.out.println("Dammi un numero in ingresso:"); 
+
+		
+				
+	 		 int numeroIn = scan.nextInt(); // Inserisco il numero da tastiera
+
+	 		 
+
+	 		  //*********Quà il codice per il calcolo dei numeri divisibili per 3 e minori del numero inserito da tastiera*******
+
+		     n= numeroIn/3;
+
+		                           
+
+		     resto= numeroIn%3;
+
+		     if(numeroIn==3) {System.out.println(" Per il tre ci sono zero valori che soddisfano la condizione posta");}
+
+		        if(numeroIn/3 >=1)  {    // ******Qua apro il controllo if di quello che mi viene inserito da tastiera che sia un multiplo di 3 *****
+
+		                                 // altrimenti vai alla riga 70//
+
+		             if(resto >0) {    
+
+		     
+
+		                                 
+
+		                System.out.println("I numeri divisibili per tre e minori di "+numeroIn + " sono: ");
+
+		   
+
+		                   System.out.print(x1); 
+
+		                     for( int i=2; i<= n && numeroIn >=3;i++) { 
+
+			
+
+			                 sm1= 3*i;
+
+			
+
+			                System.out.print(","+sm1);}
+
+		                                                              }
+
+												
+		  else if (numeroIn >3){	                     
+
+	           System.out.println("I numeri divisibili per tre e minori di "+numeroIn + " sono: ");
+
+		   
+
+	          System.out.print(x1);   
+
+	          for( int i=2; i<= n-1  && numeroIn >=3;i++) { 
+
+		
+
+		        sm1= 3*i;
+
+		
+
+		           System.out.print(","+sm1);
+
+		
+
+		                            }  }    }  
+
+		    	  	   
+		     
+		      else  {
+
+		    	  System.out.println(" Per il tre ci sono zero valori che soddisfano la condizione posta");}
+
+		   
+
+		          System.out.println(" "); 
+
+		     
+
+	               System.out.println("****************************");
+
+		    
+		                        
+
+	//***** Qua il programma per i numeri divisibili per 5 e minori del numero inserito da tatiera********
+
+		 	     
+		                  
+
+             n= numeroIn/5;
+
+		     
+
+		     resto= numeroIn%5;
+
+		     if(numeroIn==5) {System.out.println(" Per il cinque ci sono zero valori che soddisfano la condizione posta");}
+
+		     
+
+		      if(numeroIn/5 >=1) { // Verifica che ciò che viene inserito da tastiera sia un multipolo di 5 altrimenti salta alla riga 118 
+
+		     
+
+		     if(resto >0) {   
+
+		    
+	         
+
+		     System.out.println("I numeri divisibili per cinque e minori di "+numeroIn + " sono: ");
+
+		   
+
+		     System.out.print(x2);
+
+		for( int i=2; i<= n;i++) { 
+
+			
+
+			
+
+			sm1= 5*i;
+
+			
+
+			System.out.print(","+sm1);}
+
+		}
+
+		
+					
+
+		else if(numeroIn>5) {	
+
+	     System.out.println("I numeri divisibili per cinque e minori di "+numeroIn + " sono:");
+
+	     System.out.print(x2);  
+
+	     
+
+	for( int i=2; i<= n-1 && numeroIn >=5;i++) { 
+
+		
+
+		sm1= 5*i;
+
+		
+
+		System.out.print(","+sm1);
+
+		
+
+		                  }  }  }
+
+		        		                               		     		          
+
+     else  {
+
+	    	  System.out.println(" Per il cinque ci sono zero valori che soddisfano la condizione posta");}
+
+		      
+
+		      System.out.println("");
+
+		      
+
+		      System.out.println("****************************");
+
+		      
+		      
+
+     //*********Quà il programma dei multipli di 3 e 5***********
+
+      
+		      
+
+		      n= numeroIn/15;
+
+			     
+
+			     resto= numeroIn%15;
+
+			     if(numeroIn==15) {System.out.println(" Per il quindici ci sono zero valori che soddisfano la condizione posta");}
+
+			     
+
+			      if(numeroIn/15 >=1) { // Verifica che ciò che viene inserito da tastiera sia un multiplo di 3 e 5 altrimenti salta alla riga 167 
+
+			     
+
+			     if(resto >0) {   
+			     
+		    		  
+			   
+
+			     System.out.println("I numeri divisibili per multipli di tre e cinque e minori di "+numeroIn + " sono: ");
+
+			   
+
+			     System.out.print(x3)
+
+			     ;
+
+			for( int i=2; i<= n;i++) { 
+
+				
+
+				
+
+				sm1= 15*i;
+
+				
+
+				System.out.print(","+sm1);}
+
+			}
+
+												
+
+			     else if(numeroIn>15){	
+
+		     System.out.println("I numeri divisibili per tre e per cinque e minori di "+numeroIn + " sono: ");
+
+			   
+
+		     
+
+		for( int i=1; i<= n-1 && numeroIn >=15;i++) { 
+
+			
+
+			sm1= 15*i;
+
+			
+
+			System.out.print(","+sm1);
+
+			
+
+			                  }  }  }
+
+
+	     else  {
+
+		    	  System.out.println(" Per il tre ed cinque ci sono zero valori che soddisfano la condizione posta");}  
+
+			      System.out.println("");
+
+
+
+			       System.out.println("Digitare ok per continure.Premendo o digitando un altro tasto esci dal programma");
+
+		 continuare= scan.next();
+
+		         
+
+	   
+
+	   System.out.println(continuare);
+
+	   
+
+		}
+
+	   
+	   System.out.println("***fine programma ciao***");
+
+	  
+}
+
+} 
